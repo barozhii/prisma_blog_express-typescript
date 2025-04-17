@@ -1,0 +1,14 @@
+
+node_modules/
+
+# Prisma
+
+
+.env
+.env.*.local
+
+# TypeScript
+dist/
+build/
+*.tsbuildinfo
+
