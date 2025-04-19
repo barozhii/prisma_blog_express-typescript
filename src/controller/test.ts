@@ -16,11 +16,12 @@ export const getTests = async (req: Request, res: Response) => {
 };
 
 export const createTest = async (req: Request, res: Response) => {
-  const { name } = req.body;
+  const { name, age } = req.body;
   try {
     const newTest = await prisma.test.create({
       data: {
         name,
+        age,
       },
     });
     res.status(201).json(newTest);

@@ -883,15 +883,18 @@ export namespace Prisma {
 
   export type TestAvgAggregateOutputType = {
     id: number | null
+    age: number | null
   }
 
   export type TestSumAggregateOutputType = {
     id: number | null
+    age: number | null
   }
 
   export type TestMinAggregateOutputType = {
     id: number | null
     name: string | null
+    age: number | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -899,6 +902,7 @@ export namespace Prisma {
   export type TestMaxAggregateOutputType = {
     id: number | null
     name: string | null
+    age: number | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -906,6 +910,7 @@ export namespace Prisma {
   export type TestCountAggregateOutputType = {
     id: number
     name: number
+    age: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -914,15 +919,18 @@ export namespace Prisma {
 
   export type TestAvgAggregateInputType = {
     id?: true
+    age?: true
   }
 
   export type TestSumAggregateInputType = {
     id?: true
+    age?: true
   }
 
   export type TestMinAggregateInputType = {
     id?: true
     name?: true
+    age?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -930,6 +938,7 @@ export namespace Prisma {
   export type TestMaxAggregateInputType = {
     id?: true
     name?: true
+    age?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -937,6 +946,7 @@ export namespace Prisma {
   export type TestCountAggregateInputType = {
     id?: true
     name?: true
+    age?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -1031,6 +1041,7 @@ export namespace Prisma {
   export type TestGroupByOutputType = {
     id: number
     name: string | null
+    age: number | null
     createdAt: Date
     updatedAt: Date
     _count: TestCountAggregateOutputType | null
@@ -1057,6 +1068,7 @@ export namespace Prisma {
   export type TestSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    age?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["test"]>
@@ -1064,6 +1076,7 @@ export namespace Prisma {
   export type TestSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    age?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["test"]>
@@ -1071,6 +1084,7 @@ export namespace Prisma {
   export type TestSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    age?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["test"]>
@@ -1078,11 +1092,12 @@ export namespace Prisma {
   export type TestSelectScalar = {
     id?: boolean
     name?: boolean
+    age?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type TestOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "createdAt" | "updatedAt", ExtArgs["result"]["test"]>
+  export type TestOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "age" | "createdAt" | "updatedAt", ExtArgs["result"]["test"]>
 
   export type $TestPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Test"
@@ -1090,6 +1105,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string | null
+      age: number | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["test"]>
@@ -1517,6 +1533,7 @@ export namespace Prisma {
   interface TestFieldRefs {
     readonly id: FieldRef<"Test", 'Int'>
     readonly name: FieldRef<"Test", 'String'>
+    readonly age: FieldRef<"Test", 'Int'>
     readonly createdAt: FieldRef<"Test", 'DateTime'>
     readonly updatedAt: FieldRef<"Test", 'DateTime'>
   }
@@ -1902,6 +1919,7 @@ export namespace Prisma {
   export const TestScalarFieldEnum: {
     id: 'id',
     name: 'name',
+    age: 'age',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -2003,6 +2021,7 @@ export namespace Prisma {
     NOT?: TestWhereInput | TestWhereInput[]
     id?: IntFilter<"Test"> | number
     name?: StringNullableFilter<"Test"> | string | null
+    age?: IntNullableFilter<"Test"> | number | null
     createdAt?: DateTimeFilter<"Test"> | Date | string
     updatedAt?: DateTimeFilter<"Test"> | Date | string
   }
@@ -2010,6 +2029,7 @@ export namespace Prisma {
   export type TestOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrderInput | SortOrder
+    age?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -2020,6 +2040,7 @@ export namespace Prisma {
     OR?: TestWhereInput[]
     NOT?: TestWhereInput | TestWhereInput[]
     name?: StringNullableFilter<"Test"> | string | null
+    age?: IntNullableFilter<"Test"> | number | null
     createdAt?: DateTimeFilter<"Test"> | Date | string
     updatedAt?: DateTimeFilter<"Test"> | Date | string
   }, "id">
@@ -2027,6 +2048,7 @@ export namespace Prisma {
   export type TestOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrderInput | SortOrder
+    age?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: TestCountOrderByAggregateInput
@@ -2042,12 +2064,14 @@ export namespace Prisma {
     NOT?: TestScalarWhereWithAggregatesInput | TestScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Test"> | number
     name?: StringNullableWithAggregatesFilter<"Test"> | string | null
+    age?: IntNullableWithAggregatesFilter<"Test"> | number | null
     createdAt?: DateTimeWithAggregatesFilter<"Test"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Test"> | Date | string
   }
 
   export type TestCreateInput = {
     name?: string | null
+    age?: number | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -2055,12 +2079,14 @@ export namespace Prisma {
   export type TestUncheckedCreateInput = {
     id?: number
     name?: string | null
+    age?: number | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type TestUpdateInput = {
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    age?: NullableIntFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2068,6 +2094,7 @@ export namespace Prisma {
   export type TestUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    age?: NullableIntFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2075,12 +2102,14 @@ export namespace Prisma {
   export type TestCreateManyInput = {
     id?: number
     name?: string | null
+    age?: number | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type TestUpdateManyMutationInput = {
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    age?: NullableIntFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2088,6 +2117,7 @@ export namespace Prisma {
   export type TestUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    age?: NullableIntFieldUpdateOperationsInput | number | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -2118,6 +2148,17 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
+  export type IntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -2137,17 +2178,20 @@ export namespace Prisma {
   export type TestCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    age?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
   export type TestAvgOrderByAggregateInput = {
     id?: SortOrder
+    age?: SortOrder
   }
 
   export type TestMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    age?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -2155,12 +2199,14 @@ export namespace Prisma {
   export type TestMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
+    age?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
   export type TestSumOrderByAggregateInput = {
     id?: SortOrder
+    age?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -2197,6 +2243,22 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
+  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -2213,6 +2275,14 @@ export namespace Prisma {
 
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
+  }
+
+  export type NullableIntFieldUpdateOperationsInput = {
+    set?: number | null
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
   }
 
   export type DateTimeFieldUpdateOperationsInput = {
@@ -2250,6 +2320,17 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeFilter<$PrismaModel = never> = {
@@ -2307,7 +2388,7 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type NestedIntNullableFilter<$PrismaModel = never> = {
+  export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
     notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -2315,7 +2396,23 @@ export namespace Prisma {
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
+  export type NestedFloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {

@@ -17,6 +17,7 @@ datasource db {
 model Test {
   id        Int      @id @default(autoincrement())
   name      String?
+  age       Int?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
