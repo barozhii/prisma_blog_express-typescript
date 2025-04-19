@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "generate": "prisma generate",
-    "build": "tsc",
+    "build": "npm install && tsc",
     "start": "node dist/index.js",
     "db:push": "prisma db push",
     "db:studio": "prisma studio"
