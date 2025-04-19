@@ -117,10 +117,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.TestScalarFieldEnum = {
+exports.Prisma.CarScalarFieldEnum = {
   id: 'id',
-  name: 'name',
-  age: 'age',
+  make: 'make',
+  model: 'model',
+  year: 'year',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -135,14 +136,9 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
-exports.Prisma.NullsOrder = {
-  first: 'first',
-  last: 'last'
-};
-
 
 exports.Prisma.ModelName = {
-  Test: 'Test'
+  Car: 'Car'
 };
 
 /**
