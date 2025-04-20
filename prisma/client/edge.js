@@ -123,7 +123,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Korek\\Desktop\\final_test_prisma\\prisma\\client",
+      "value": "C:\\Users\\suhaibm\\Desktop\\prisma_blog_express-typescript\\prisma\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -137,11 +137,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\Korek\\Desktop\\final_test_prisma\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\suhaibm\\Desktop\\prisma_blog_express-typescript\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../.env"
   },
   "relativePath": "..",
@@ -155,7 +155,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://postgres:1234@localhost:5432/final_test?schema=public"
+        "value": "postgresql://myuser:12345@localhost:5432/blog_test_prisma?schema=public"
       }
     }
   },

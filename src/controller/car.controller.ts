@@ -41,7 +41,7 @@ export const getCarById = async (req: Request, res: Response) => {
       where: { id: Number(id) },
     });
     if (!car) {
-      return res.status(404).json({ error: "Car not found" });
+      res.status(404).json({ error: "Car not found" });
     }
     res.status(200).json(car);
   } catch (error) {
